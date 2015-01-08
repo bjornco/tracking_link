@@ -14,6 +14,7 @@ class USPSTest < Test::Unit::TestCase
 
   def test_detect_if_is_a_tracking_number
     assert USPS.detect("9101128882300879851252")
+    assert USPS.detect("9200190143783301593855")
     assert !USPS.detect("477179081230")
   end
 
