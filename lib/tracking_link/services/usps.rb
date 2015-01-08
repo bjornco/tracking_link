@@ -2,7 +2,7 @@ module TrackingLink
   module Services
     class USPS < Struct.new(:tracking_number)
       def link
-        "http://trkcnfrm1.smi.usps.com/PTSInternetWeb/InterLabelInquiry.do?origTrackNum=#{tracking_number}"
+        "https://tools.usps.com/go/TrackConfirmAction?qtc_tLabels1=#{tracking_number}"
       end
 
       def self.detect(tracking_number)

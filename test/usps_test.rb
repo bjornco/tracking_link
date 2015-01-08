@@ -20,7 +20,7 @@ class USPSTest < Test::Unit::TestCase
 
   def test_link
     @tracking_number = USPS.new("9101128882300879851252")
-    assert_equal "http://trkcnfrm1.smi.usps.com/PTSInternetWeb/InterLabelInquiry.do?origTrackNum=9101128882300879851252",
+    assert_equal "https://tools.usps.com/go/TrackConfirmAction?qtc_tLabels1=9101128882300879851252",
       @tracking_number.link
   end
 end
