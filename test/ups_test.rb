@@ -14,6 +14,7 @@ class UPSTest < Test::Unit::TestCase
 
   def test_detect_if_is_a_tracking_number
     assert UPS.detect("1Z9999W99999999999")
+    assert UPS.detect("1z6y04v20315267525")
     assert !UPS.detect("477179081230")
   end
 

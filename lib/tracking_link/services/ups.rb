@@ -6,7 +6,7 @@ module TrackingLink
       end
 
       def self.detect(tracking_number)
-        tracking_number =~ /^1Z(\w{15})(\w)$/
+        tracking_number =~ /^1Z(\w{15})(\w)$/i
       end
     end
   end
