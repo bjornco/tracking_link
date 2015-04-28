@@ -6,7 +6,7 @@ module TrackingLink
       end
 
       def self.detect(tracking_number)
-        tracking_number = tracking_number.gsub(/\s/, '')
+        tracking_number = tracking_number.gsub(/[\s-]/, '')
 
         (tracking_number =~ /^(9[0-9]{20})([0-9])$/) ||
         (tracking_number =~ /^([0-9]{2})([0-9]{9})([0-9]{8})([0-9])$/) ||

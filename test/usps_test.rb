@@ -17,6 +17,7 @@ class USPSTest < Test::Unit::TestCase
     assert USPS.detect("9200190143783301593855")
     assert USPS.detect("9552111103535017432297")
     assert USPS.detect("9400 1000 0000 0000 0000 00")
+    assert USPS.detect("911-4999 944313558128223")
 
     assert !USPS.detect("477179081230")
   end
